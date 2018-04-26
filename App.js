@@ -1,23 +1,14 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
-}
+import MostUsedScreen from './src/screens/KaomojiScreens/MostUsedScreen';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+// Register Screens
+Navigation.registerComponent("kaomoji.MostUsedScreen", () => MostUsedScreen);
+
+// Start an App
+Navigation.startSingleScreenApp({
+    screen: {
+        screen: 'kaomoji.MostUsedScreen', // unique ID registered with Navigation.registerScreen
+        title: 'Most Used' // title of the screen as appears in the nav bar (optional)
+    }
 });
