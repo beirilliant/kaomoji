@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
-import ListNavItem from '../../components/ListNavItem/ListNavItem'
+import ListNavItem from '../../components/ListNavItem/ListNavItem';
 
+const customData = require('../../../faces.json');
+
+const navItems = customData.Faces.map((item, i) => (
+    <ListNavItem key={i} navName={item.name} />
+));
 
 class GridNavScreen extends Component {
 
     render () {
         return (
-            <View style={styles.gridNav}>
-                <ListNavItem />
-                <ListNavItem />
-                <ListNavItem />
-                <ListNavItem />
-                <ListNavItem />
-                <ListNavItem />
-                <ListNavItem />
-            </View>
+            <ScrollView >
+                <View style={styles.gridNav}>
+                   { navItems }
+                </View>
+            </ScrollView>
         );
     }
 }

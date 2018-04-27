@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const listNavItem = () => {
+const listNavItem = (props) => {
     return (
         <View style={styles.listItem}>
-            <Text style={styles.listText}>smile</Text>
+            <Text style={styles.listText}>{props.navName}</Text>
         </View>
     )
 }
