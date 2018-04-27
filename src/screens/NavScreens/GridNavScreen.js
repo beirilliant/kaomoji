@@ -5,8 +5,14 @@ import ListNavItem from '../../components/ListNavItem/ListNavItem';
 
 const customData = require('../../../faces.json');
 
-const navItems = customData.Faces.map((item, i) => (
-    <ListNavItem key={i} navName={item.name} />
+const navArr = [];
+
+for (key in customData) {
+    navArr.push(key);
+}
+
+const navItems = navArr.map((item) => (
+    <ListNavItem key={item} navName={item} />
 ));
 
 class GridNavScreen extends Component {
