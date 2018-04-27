@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const listNavItem = (props) => {
     return (
-        <View style={styles.listItem}>
+        <TouchableOpacity style={styles.listItem}>
             <Text style={styles.listText}>{props.navName}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 
