@@ -11,6 +11,6 @@ Navigation.registerComponent("kaomoji.KaomojiScreen", () => KaomojiScreen);
 Navigation.startSingleScreenApp({
     screen: {
         screen: 'kaomoji.GridNavScreen', // unique ID registered with Navigation.registerScreen
-        title: 'Kaomoji Collection' // title of the screen as appears in the nav bar (optional)
+        title: 'Collection' // title of the screen as appears in the nav bar (optional)
     }
 });

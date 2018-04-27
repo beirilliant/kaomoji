@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
 class KaomojiScreen extends Component {
-
     render () {
         return (
             <View style={styles.gridNav}>

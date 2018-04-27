@@ -5,10 +5,10 @@ import ListNavItem from '../../components/ListNavItem/ListNavItem';
 
 class GridNavScreen extends Component {
 
-    navItemHandler = () => {
+    navItemHandler = key => {
         this.props.navigator.push({
             screen: 'kaomoji.KaomojiScreen', // unique ID registered with Navigation.registerScreen
-            title: 'new Screen' // navigation bar title of the pushed screen (optional)
+            title: key // navigation bar title of the pushed screen (optional)
           });
     }
     
@@ -22,7 +22,7 @@ class GridNavScreen extends Component {
         }
         
         const navItems = navArr.map((item) => (
-            <ListNavItem key={item} navName={item} onItemPressed={() => this.navItemHandler()}/>
+            <ListNavItem key={item} navName={item} onItemPressed={() => this.navItemHandler(item)}/>
         ));
 
         return (
