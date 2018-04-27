@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class MostUsedScreen extends Component {
+class GridNavScreen extends Component {
     render () {
         return (
             <View>
@@ -11,4 +11,4 @@ class MostUsedScreen extends Component {
     }
 }
 
-export default MostUsedScreen;
+export default GridNavScreen;
