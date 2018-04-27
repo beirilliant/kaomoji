@@ -3,7 +3,7 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const listNavItem = (props) => {
     return (
-        <TouchableOpacity style={styles.listItem}>
+        <TouchableOpacity style={styles.listItem} onPress={props.onItemPressed}>
             <Text style={styles.listText}>{props.navName}</Text>
         </TouchableOpacity>
     )
