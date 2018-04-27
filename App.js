@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation';
 
-import GridNavScreen from './src/screens/KaomojiScreens/GridNavScreen';
+import GridNavScreen from './src/screens/NavScreens/GridNavScreen';
 
 // Register Screens
 Navigation.registerComponent("kaomoji.GridNavScreen", () => GridNavScreen);
