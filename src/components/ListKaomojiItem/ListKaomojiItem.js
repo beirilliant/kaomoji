@@ -1,9 +1,9 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Clipboard } from 'react-native';
 
 const listKaomojiItem = (props) => {
     return (
-        <TouchableOpacity style={styles.listItem}>
+        <TouchableOpacity style={styles.listItem} onPress={() => Clipboard.setString(props.selKaomoji.art)} >
             <Text style={styles.listHeading}>{props.selKaomoji.name}</Text>
             <Text style={styles.listKaomoji}>{props.selKaomoji.art}</Text>
         </TouchableOpacity>

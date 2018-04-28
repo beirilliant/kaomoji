@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, StyleSheet, TextInput } from 'react-native';
+import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
 import ListKaomojiItem from '../../components/ListKaomojiItem/ListKaomojiItem';
 
