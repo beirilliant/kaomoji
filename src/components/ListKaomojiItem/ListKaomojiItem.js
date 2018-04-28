@@ -13,14 +13,13 @@ const listKaomojiItem = (props) => {
 const styles = StyleSheet.create({
     listItem: {
         width: '48%',
-        padding: 10,
+        padding: 5,
         marginBottom: 15,
         borderWidth: 1,
         borderRadius: 5
     },
     listHeading: {
         textAlign: 'center',
-        fontSize: 24,
         marginBottom: 5
     },
     listKaomoji: {
