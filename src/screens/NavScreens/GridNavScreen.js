@@ -6,9 +6,13 @@ import ListNavItem from '../../components/ListNavItem/ListNavItem';
 class GridNavScreen extends Component {
 
     navItemHandler = key => {
+        const kaomojiArr = require('../../../faces.json')[key];
         this.props.navigator.push({
             screen: 'kaomoji.KaomojiScreen', // unique ID registered with Navigation.registerScreen
-            title: key // navigation bar title of the pushed screen (optional)
+            title: key, // navigation bar title of the pushed screen (optional)
+            passProps: {
+                selKaomoji: kaomojiArr
+            } // Object that will be passed as props to the pushed screen (optional)
           });
     }
     

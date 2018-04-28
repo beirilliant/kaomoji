@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Text, StyleSheet } from 'react-native';
 
+import ListKaomojiItem from '../../components/ListKaomojiItem/ListKaomojiItem';
+
 class KaomojiScreen extends Component {
+
     render () {
+        const kaomojiItems = this.props.selKaomoji.map((item) => (
+            <ListKaomojiItem key={item} selKaomoji={item} />
+        ));
+
         return (
             <View style={styles.gridNav}>
-                <Text>KaomojiScreen</Text>
+                {kaomojiItems}
             </View>
         );
     }
