@@ -12,7 +12,7 @@ const listKaomojiItem = (props) => {
 
 const styles = StyleSheet.create({
     listItem: {
-        width: '30%',
+        width: '48%',
         padding: 20,
         marginBottom: 15,
         borderWidth: 1,

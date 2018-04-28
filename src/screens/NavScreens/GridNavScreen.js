@@ -4,9 +4,15 @@ import { View, ScrollView, Text, StyleSheet } from 'react-native';
 import ListNavItem from '../../components/ListNavItem/ListNavItem';
 
 class GridNavScreen extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            customData: require('../../../faces.json')
+        };
+    }
 
     navItemHandler = key => {
-        const kaomojiArr = require('../../../faces.json')[key];
+        const kaomojiArr = this.state.customData[key];
         this.props.navigator.push({
             screen: 'kaomoji.KaomojiScreen', // unique ID registered with Navigation.registerScreen
             title: key, // navigation bar title of the pushed screen (optional)
@@ -17,11 +23,10 @@ class GridNavScreen extends Component {
     }
     
     render () {
-        const customData = require('../../../faces.json');
         
         const navArr = [];
         
-        for (key in customData) {
+        for (key in this.state.customData) {
             navArr.push(key);
         }
         
