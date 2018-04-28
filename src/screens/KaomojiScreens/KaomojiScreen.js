@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, StyleSheet } from 'react-native';
+import { View, ScrollView, Text, StyleSheet, TextInput } from 'react-native';
 
 import ListKaomojiItem from '../../components/ListKaomojiItem/ListKaomojiItem';
 
 class KaomojiScreen extends Component {
 
     render () {
-        const kaomojiItems = this.props.selKaomoji.map((item) => (
-            <ListKaomojiItem key={item} selKaomoji={item} />
+        const kaomojiItems = this.props.selKaomoji.map((item, i) => (
+            <ListKaomojiItem key={i} selKaomoji={item} />
         ));
 
         return (
-            <View style={styles.gridNav}>
-                {kaomojiItems}
-            </View>
+            <ScrollView>
+                <View style={styles.gridNav}>
+                    {kaomojiItems}
+                </View>
+            </ScrollView>
         );
     }
 }
