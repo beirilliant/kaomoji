@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
         padding: 5,
         marginBottom: 15,
         borderWidth: 1,
-        borderRadius: 5
+        borderRadius: 5,
+        backgroundColor: '#E3F2F1'
     },
     listHeading: {
         textAlign: 'center',
