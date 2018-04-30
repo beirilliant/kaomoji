@@ -11,7 +11,7 @@ const listNavItem = (props) => {
 
 const styles = StyleSheet.create({
     listItem: {
-        width: '30%',
+        width: '48%',
         padding: 20,
         marginBottom: 15,
         borderWidth: 1,
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     listText: {
         textAlign: 'center',
-        fontSize: 24
+        fontSize: 20
     }
 }) 
 
