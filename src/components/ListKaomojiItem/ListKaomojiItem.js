@@ -5,7 +5,7 @@ const listKaomojiItem = (props) => {
     return (
         <TouchableOpacity style={styles.listItem} onPress={() => Clipboard.setString(props.selKaomoji.art)} >
             <Text style={styles.listHeading}>{props.selKaomoji.name}</Text>
-            <Text style={styles.listKaomoji}>{props.selKaomoji.art}</Text>
+            <Text style={styles.listKaomoji}>{props.selKaomoji.text}</Text>
         </TouchableOpacity>
     )
 }

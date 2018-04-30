@@ -7,7 +7,7 @@ class GridNavScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            customData: require('../../../faces.json')
+            customData: require('../../../kaomoji-export.json')
         };
     }
 
